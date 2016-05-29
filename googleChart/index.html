@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>google chart sample</title>
+    <style>
+        html, body {background: #ccc;}
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.1', {
+            packages: ['line']
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', ' ');
+            data.addRows([
+                ['B1', 37.8],
+                ['S', 30.9],
+                ['A2', 25.4]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Box Office Earnings in First Two Weeks of Opening',
+                    subtitle: 'in millions of dollars (USD)'
+                },
+                width: 900,
+                height: 500,
+                backgroundColor: {
+                    fill: 'transparent'
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('graph'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+
+<div id="graph"></div>
+
+</body>
+</html>
