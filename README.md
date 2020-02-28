@@ -2,5 +2,5 @@
 
 ## テストページ
 
-- https://gumigumih.github.io/chart-test/chart.js/
-- https://gumigumih.github.io/chart-test/googleChart/
+- https://gumigumih.github.io/chart.js_test/chart.js/
+- https://gumigumih.github.io/chart.js_test/googleChart/
